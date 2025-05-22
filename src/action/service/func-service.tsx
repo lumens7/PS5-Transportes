@@ -6,7 +6,7 @@ export default async function CriarFunc(prevState: any,formData:FormData){
     const nome = formData.get('nome') as string
     const cpf = Number(formData.get('cpf'))
     const turno = formData.get('turno') as string
-    const alojamento = formData.get('alojamento') as string
+    const alojamento = formData.get('funcionario') as string
 
     await prisma.cadastro_funcionario.create({
         data:{
